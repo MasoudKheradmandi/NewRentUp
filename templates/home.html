@@ -1,0 +1,724 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+			
+			<!-- ============================ Hero Banner  Start================================== -->
+			<div class="image-cover hero_banner" style="background:#042238 url({% static 'assets/img/banner-5.jpg' %}) no-repeat;">
+				<div class="container">
+					
+					<div class="row">
+						<div class="col-xl-7 col-lg-8 col-md-10">
+							<h2 class="big-header-capt mb-4">مکان مناسب بعدی خود<br>را برای <span class="theme-cl">زندگی</span> پیدا<br> کنید.</h2>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12">
+							<div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
+								<div class="search_hero_wrapping">
+							
+									<div class="row">
+										<div class="col-lg-3 col-md-3 col-sm-12">
+											<div class="form-group">
+												<label>شهر/استان</label>
+												<div class="input-with-icon">
+													<select id="location" class="form-control">
+														<option value="">&nbsp;</option>
+														<option value="1">تهران</option>
+														<option value="2">کرج</option>
+														<option value="3">تبریز</option>
+														<option value="4">اصفهان</option>
+														<option value="5">رشت</option>
+														<option value="6">زنجان</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-2 col-md-3 col-sm-12">
+											<div class="form-group">
+												<label>نوع ملک</label>
+												<div class="input-with-icon">
+													<select id="ptypes" class="form-control">
+														<option value="">&nbsp;</option>
+														<option value="1">همه دسته ها</option>
+														<option value="2">آپارتمان</option>
+														<option value="3">ویلا</option>
+														<option value="4">تجاری</option>
+														<option value="5">دفتر</option>
+														<option value="6">پارکینگ</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
+											<div class="form-group">
+												<label>قیمت</label>
+												<div class="input-with-icon">
+													<select id="price" class="form-control">
+														<option value="">&nbsp;</option>
+														<option value="1">از 40,000 تا 10m</option>
+														<option value="2">از 60,000 تا 20m</option>
+														<option value="3">از 70,000 تا 30m</option>
+														<option value="3">از 80,000 تا 40m</option>
+														<option value="3">از 90,000 تا 50m</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-2 col-md-3 col-sm-12">
+											<div class="form-group none">
+												<a class="collapsed ad-search" data-toggle="collapse" data-parent="#search" data-target="#advance-search" href="javascript:void(0);" aria-expanded="false" aria-controls="advance-search"><i class="fa fa-sliders-h ml-2"></i>فیلتر پیشرفته</a>
+											</div>
+										</div>
+										
+										<div class="col-lg-2 col-md-3 col-sm-12 small-padd">
+											<div class="form-group none">
+												<a href="#" class="btn search-btn">جستجوی ملک</a>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Collapse Advance Search Form -->
+									<div class="collapse" id="advance-search" aria-expanded="false" role="banner">
+										
+										<!-- row -->
+										<div class="row">
+										
+											<div class="col-lg-3 col-md-6 col-sm-6">
+												<div class="form-group none style-auto">
+													<select id="bedrooms" class="form-control">
+														<option value="">&nbsp;</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select>
+												</div>
+											</div>
+											
+											<div class="col-lg-3 col-md-6 col-sm-6">
+												<div class="form-group none style-auto">
+													<select id="bathrooms" class="form-control">
+														<option value="">&nbsp;</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select>
+												</div>
+											</div>
+											
+											<div class="col-lg-3 col-md-6 col-sm-6">
+												<div class="form-group none">
+													<input type="text" class="form-control" placeholder="حداقل مترمربع" />
+												</div>
+											</div>
+											
+											<div class="col-lg-3 col-md-6 col-sm-6">
+												<div class="form-group none">
+													<input type="text" class="form-control" placeholder="حداکثر مترمربع" />
+												</div>
+											</div>
+											
+										</div>
+										<!-- /row -->
+										
+										<!-- row -->
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+												<h6>قیمت</h6>
+												<div class="rg-slider">
+													 <input type="text" class="js-range-slider" name="my_range" value="" />
+												</div>
+											</div>
+										</div>
+										<!-- /row -->
+										
+										<!-- row -->
+										<div class="row">
+										
+											<div class="col-lg-12 col-md-12 col-sm-12 mt-3">
+												<h4 class="text-dark">امکانات و ویژگی ها</h4>
+												<ul class="no-ul-list third-row">
+													<li>
+														<input id="a-1" class="checkbox-custom" name="a-1" type="checkbox">
+														<label for="a-1" class="checkbox-custom-label">تهویه کننده هوا</label>
+													</li>
+													<li>
+														<input id="a-2" class="checkbox-custom" name="a-2" type="checkbox">
+														<label for="a-2" class="checkbox-custom-label">تختخواب</label>
+													</li>
+													<li>
+														<input id="a-3" class="checkbox-custom" name="a-3" type="checkbox">
+														<label for="a-3" class="checkbox-custom-label">گرمایش</label>
+													</li>
+													<li>
+														<input id="a-4" class="checkbox-custom" name="a-4" type="checkbox">
+														<label for="a-4" class="checkbox-custom-label">اینترنت</label>
+													</li>
+													<li>
+														<input id="a-5" class="checkbox-custom" name="a-5" type="checkbox">
+														<label for="a-5" class="checkbox-custom-label">مایکروویو</label>
+													</li>
+													<li>
+														<input id="a-6" class="checkbox-custom" name="a-6" type="checkbox">
+														<label for="a-6" class="checkbox-custom-label">سیگار</label>
+													</li>
+													<li>
+														<input id="a-7" class="checkbox-custom" name="a-7" type="checkbox">
+														<label for="a-7" class="checkbox-custom-label">تراس</label>
+													</li>
+													<li>
+														<input id="a-8" class="checkbox-custom" name="a-8" type="checkbox">
+														<label for="a-8" class="checkbox-custom-label">بالکن</label>
+													</li>
+													<li>
+														<input id="a-9" class="checkbox-custom" name="a-9" type="checkbox">
+														<label for="a-9" class="checkbox-custom-label">آیفون</label>
+													</li>
+													<li>
+														<input id="a-10" class="checkbox-custom" name="a-10" type="checkbox">
+														<label for="a-10" class="checkbox-custom-label">وای فای</label>
+													</li>
+													<li>
+														<input id="a-11" class="checkbox-custom" name="a-11" type="checkbox">
+														<label for="a-11" class="checkbox-custom-label">ساحل</label>
+													</li>
+													<li>
+														<input id="a-12" class="checkbox-custom" name="a-12" type="checkbox">
+														<label for="a-12" class="checkbox-custom-label">پارکینگ</label>
+													</li>
+												</ul>
+											</div>
+											
+										</div>
+										<!-- /row -->
+										
+									</div>
+									
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ============================ Hero Banner End ================================== -->
+			
+			<!-- ============================ Property Type Start ================================== -->
+			<section class="light-bg min">
+				<div class="container">
+				
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="sec-heading center">
+								<h2>انواع املاک ویژه</h2>
+								<p>جستجو همه نوع ملک</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row justify-content-center">
+						
+						<div class="col-lg col-md-4">
+							<!-- Single Category -->
+							<div class="property_cats_boxs">
+								<a href="grid-layout-with-sidebar.html" class="category-box">
+									<div class="property_category_short">
+										<div class="category-icon clip-1">
+											<i class="flaticon-beach-house-2"></i>
+										</div>
+
+										<div class="property_category_expand property_category_short-text">
+											<h4>خانه</h4>
+											<p>122 ملک</p>
+										</div>
+									</div>
+								</a>	
+							</div>
+						</div>
+						
+						<div class="col-lg col-md-4">
+							<!-- Single Category -->
+							<div class="property_cats_boxs">
+								<a href="grid-layout-with-sidebar.html" class="category-box">
+									<div class="property_category_short">
+										<div class="category-icon clip-2">
+											<i class="flaticon-cabin"></i>
+										</div>
+
+										<div class="property_category_expand property_category_short-text">
+											<h4>خانه و ویلا</h4>
+											<p>155 ملک</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						
+						<div class="col-lg col-md-4">
+							<!-- Single Category -->
+							<div class="property_cats_boxs">
+								<a href="grid-layout-with-sidebar.html" class="category-box">
+									<div class="property_category_short">
+										<div class="category-icon clip-3">
+											<i class="flaticon-apartments"></i>
+										</div>
+
+										<div class="property_category_expand property_category_short-text">
+											<h4>آپارتمان</h4>
+											<p>300 ملک</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						
+						<div class="col-lg col-md-4">
+							<!-- Single Category -->
+							<div class="property_cats_boxs">
+								<a href="grid-layout-with-sidebar.html" class="category-box">
+									<div class="property_category_short">
+										<div class="category-icon clip-4">
+											<i class="flaticon-student-housing"></i>
+										</div>
+
+										<div class="property_category_expand property_category_short-text">
+											<h4>دفتر و استودیو</h4>
+											<p>80 ملک</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						
+						<div class="col-lg col-md-4">
+							<!-- Single Category -->
+							<div class="property_cats_boxs">
+								<a href="grid-layout-with-sidebar.html" class="category-box">
+									<div class="property_category_short">
+										<div class="category-icon clip-5">
+											<i class="flaticon-modern-house-4"></i>
+										</div>
+
+										<div class="property_category_expand property_category_short-text">
+											<h4>ویلا</h4>
+											<p>80 ملک</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<!-- ============================ Property Type End ================================== -->
+			
+			<!-- ============================ Latest Property For Sale Start ================================== -->
+			<section class="min">
+				<div class="container">
+				
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-10 text-center">
+							<div class="sec-heading center mb-4">
+								<h2>املاک اخیر برای فروش</h2>
+								<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row justify-content-center">
+						{% for apa in apartemans %}
+						<!-- Single Property -->
+						<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+							<div class="property-listing list_view">
+								
+								<div class="listing-img-wrapper">
+									<div class="_exlio_125">برای فروش</div>
+									<div class="list-img-slide">
+										<div class="click">
+											<div><a href="single-property-1.html"><img src="{% static 'assets/img/p-1.png' %}" class="img-fluid mx-auto" alt="" /></a></div>
+											<div><a href="single-property-1.html"><img src="{% static 'assets/img/p-2.png' %}" class="img-fluid mx-auto" alt="" /></a></div>
+											<div><a href="single-property-1.html"><img src="{% static 'assets/img/p-3.png' %}" class="img-fluid mx-auto" alt="" /></a></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="list_view_flex">
+								
+									<div class="listing-detail-wrapper mt-1">
+										<div class="listing-short-detail-wrap">
+											<div class="_card_list_flex mb-2">
+												<div class="_card_flex_01">
+													<span class="_list_blickes _netork">6 شبکه</span>
+													<span class="_list_blickes types">خانوادگی</span>
+												</div>
+												<div class="_card_flex_last">
+													<h6 class="listing-card-info-price mb-0">700 میلیون</h6>
+												</div>
+											</div>
+											<div class="_card_list_flex">
+												<div class="_card_flex_01">
+													<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="price-features-wrapper">
+										<div class="list-fx-features">
+											<div class="listing-card-info-icon">
+												<div class="inc-fleat-icon"><img src="{% static 'assets/img/bed.svg' %}" width="13" alt="" /></div>3 خوابه
+											</div>
+											<div class="listing-card-info-icon">
+												<div class="inc-fleat-icon"><img src="{% static 'assets/img/bathtub.svg' %}" width="13" alt="" /></div>1 حمام
+											</div>
+											<div class="listing-card-info-icon">
+												<div class="inc-fleat-icon"><img src="{% static 'assets/img/move.svg' %}" width="13" alt="" /></div>800 متر مربع
+											</div>
+										</div>
+									</div>
+									
+									<div class="listing-detail-footer">
+										<div class="footer-first">
+											<div class="foot-rates">
+												<span class="elio_rate good">4.2</span>
+												<div class="_rate_stio">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+											</div>
+										</div>
+										<div class="footer-flex">
+											<a href="property-detail.html" class="prt-view">مشاهده جزئیات</a>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<!-- End Single Property -->
+						{% endfor %}
+
+						
+					</div>
+					
+				</div>
+			</section>
+			<!-- ============================ Latest Property For Sale End ================================== -->
+			
+			<!-- ============================ Smart Testimonials ================================== -->
+			<section class="image-cover" style="background:#122947 url(assets/img/pattern.png) no-repeat;">
+				<div class="container">
+				
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-8">
+							<div class="sec-heading center light">
+								<h2>نظرات خوب توسط مشتریان</h2>
+								<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row justify-content-center">
+						<div class="col-lg-8 col-md-8">
+							<div class="modern-testimonial">
+								
+								<!-- Single Items -->
+								{% for comment in CommentHome %}
+								<div class="single_items">
+									<div class="_smart_testimons">
+										<div class="_smart_testimons_thumb">
+											<img src="{{comment.image.url}}" class="img-fluid" alt="">
+											<span class="tes_quote"><i class="fa fa-quote-left"></i></span>
+										</div>
+										<div class="facts-detail">
+											<p>{{comment.text}}</p>
+										</div>
+										<div class="_smart_testimons_info">
+											<h5>{{comment.name}}</h5>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+			<!-- ============================ Smart Testimonials End ================================== -->
+			
+			<!-- ============================ List Tag Start ================================== -->
+			<section>
+				<div class="container">
+					<div class="row align-items-center justify-content-between">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+							<div class="eplios_tags">
+								<div class="tags-1">1</div>
+								<h2>جستجو و یافتن مکان ایده آل</h2>
+								<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+								<ul class="eplios_list">
+									<li>%100 تضمین پول</li>
+									<li>مکان فوق العاده یا عالی</li>
+									<li>موثر و بهترین قیمت</li>
+									<li>منطقه دوست داشتنی</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+							<div class="text-center">
+								<img src="{% static 'assets/img/tag.png' %}" class="img-fluid" alt="" />
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<!-- ============================ Property Tag End ================================== -->
+			
+			<!-- ============================ List Tag Start ================================== -->
+			<section class="pt-0">
+				<div class="container">
+					<div class="row align-items-center justify-content-between">
+					
+						<div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+							<div class="text-center">
+								<img src="{% static 'assets/img/app.png' %}" class="img-fluid" alt="" />
+							</div>
+						</div>
+						
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+							<div class="eplios_tags right">
+								<div class="tags-2">2</div>
+								<h2>با مشاوران ملاقات کنید</h2>
+								<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+								<a href="#" class="btn exliou theme-bg mt-2">جستجو ملک</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<!-- ============================ Property Tag End ================================== -->
+			
+			<!-- ============================ Top Agents ================================== -->
+			<section class="min gray">
+				<div class="container">
+				
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-8">
+							<div class="sec-heading center">
+								<h2>مشاوران برجسته ما</h2>
+								<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="item-slide space">
+								
+								<!-- Single Item -->
+								<div class="single_items">
+									<div class="grid_agents style-2">
+										<div class="elio_mx_list theme-bg-2">20 ملک</div>
+										<div class="grid_agents-wrap">
+											
+											<div class="fr-grid-thumb">
+												<a href="agent-page.html">
+													<img src="{% static 'assets/img/team-1.jpg' %}" class="img-fluid mx-auto" alt="">
+												</a>
+												<ul class="inline_social">
+													<li><a href="#"><i class="ti-facebook"></i></a></li>
+													<li><a href="#"><i class="ti-linkedin"></i></a></li>
+													<li><a href="#"><i class="ti-instagram"></i></a></li>
+													<li><a href="#"><i class="ti-twitter"></i></a></li>
+												</ul>
+											</div>
+											
+											<div class="fr-grid-deatil">
+												<span><i class="ti-location-pin ml-1"></i>ایران ، اصفهان</span>
+												<h5 class="fr-can-name"><a href="agent-page.html">رضا حسنی</a></h5>
+											</div>
+											
+											<div class="fr-infos-deatil">	
+												<a href="#"  data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope ml-2"></i>ارسال پیام</a>
+												<a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
+											</div>
+											
+										</div>
+										
+									</div>
+								</div>
+								
+								<!-- Single Item -->
+								<div class="single_items">
+									<div class="grid_agents style-2">
+										<div class="elio_mx_list theme-bg-2">18 ملک</div>
+										<div class="grid_agents-wrap">
+											
+											<div class="fr-grid-thumb">
+												<a href="agent-page.html">
+													<img src="{% static 'assets/img/team-2.jpg' %}" class="img-fluid mx-auto" alt="">
+												</a>
+												<ul class="inline_social">
+													<li><a href="#"><i class="ti-facebook"></i></a></li>
+													<li><a href="#"><i class="ti-linkedin"></i></a></li>
+													<li><a href="#"><i class="ti-instagram"></i></a></li>
+													<li><a href="#"><i class="ti-twitter"></i></a></li>
+												</ul>
+											</div>
+											
+											<div class="fr-grid-deatil">
+												<span><i class="ti-location-pin ml-1"></i>ایران ، اصفهان</span>
+												<h5 class="fr-can-name"><a href="agent-page.html">مینا عبادی</a></h5>
+											</div>
+											
+											<div class="fr-infos-deatil">	
+												<a href="#"  data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope ml-2"></i>ارسال پیام</a>
+												<a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
+											</div>
+											
+										</div>
+										
+									</div>
+								</div>
+								
+
+
+							
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+			<!-- ============================ Top Agents End ================================== -->
+			
+			<!-- ============================ Property Tag Start ================================== -->
+			<section class="image-cover" style="background:#122947 url({% static 'assets/img/slider-2.jpg' %}) no-repeat;" data-overlay="2">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+							
+							<div class="tab_exclusive">
+								<h2>آیا به دنبال مکان ایده آل برای زندگی هستید؟</h2>
+								<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته</p>
+								<a href="#" class="btn exliou theme-bg mt-2">جستجو ملک</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ============================ Property Tag End ================================== -->
+			
+			<!-- ============================ article Start ================================== -->
+			<section class="min">
+				<div class="container">
+{% comment %} 				
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-8">
+							<div class="sec-heading center">
+								<h2>آخرین اخبار و مقالات</h2>
+								<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row justify-content-center">
+						
+						<!-- Single blog Grid -->
+						<div class="col-lg-4 col-md-6">
+							<div class="grid_blog_box">
+								
+								<div class="gtid_blog_thumb">
+									<a href="blog-detail.html"><img src="{% static 'assets/img/b-1.jpg' %}" class="img-fluid" alt="" /></a>
+									<div class="gtid_blog_info"><span>30</span>فروردین 1400</div>
+								</div>								
+								
+								<div class="blog-body">
+									<h4 class="bl-title"><a href="blog-detail.html">طرح های خلاقانه</a><span class="latest_new_post">جدید</span></h4>
+									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان. </p>
+								</div>
+								
+								<div class="modern_property_footer">
+									<div class="property-author">
+										<div class="path-img"><a href="agent-page.html" tabindex="-1"><img src="assets/img/user-1.jpg" class="img-fluid" alt=""></a></div>
+										<h5><a href="agent-page.html" tabindex="-1">بهمن رمضانی</a></h5>
+									</div>
+									<span class="article-pulish-date"><i class="ti-comment-alt ml-2"></i>202</span>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single blog Grid -->
+						<div class="col-lg-4 col-md-6">
+							<div class="grid_blog_box">
+								
+								<div class="gtid_blog_thumb">
+									<a href="blog-detail.html"><img src="assets/img/b-5.jpg" class="img-fluid" alt="" /></a>
+									<div class="gtid_blog_info"><span>12</span>خرداد 1400</div>
+								</div>								
+								
+								<div class="blog-body">
+									<h4 class="bl-title"><a href="blog-detail.html">توسعه دهنده UX/UI</a><span class="latest_new_post hot">ویژه</span></h4>
+									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان. </p>
+								</div>
+								
+								<div class="modern_property_footer">
+									<div class="property-author">
+										<div class="path-img"><a href="agent-page.html" tabindex="-1"><img src="assets/img/user-2.jpg" class="img-fluid" alt=""></a></div>
+										<h5><a href="agent-page.html" tabindex="-1">الناز روستایی</a></h5>
+									</div>
+									<span class="article-pulish-date"><i class="ti-comment-alt ml-2"></i>407</span>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single blog Grid -->
+						<div class="col-lg-4 col-md-6">
+							<div class="grid_blog_box">
+								
+								<div class="gtid_blog_thumb">
+									<a href="blog-detail.html"><img src="assets/img/b-6.jpg" class="img-fluid" alt="" /></a>
+									<div class="gtid_blog_info"><span>17</span>مرداد 1400</div>
+								</div>								
+								
+								<div class="blog-body">
+									<h4 class="bl-title"><a href="blog-detail.html">توسعه دهنده وردپرس</a><span class="latest_new_post">جدید</span></h4>
+									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان. </p>
+								</div>
+								
+								<div class="modern_property_footer">
+									<div class="property-author">
+										<div class="path-img"><a href="agent-page.html" tabindex="-1"><img src="assets/img/user-3.jpg" class="img-fluid" alt=""></a></div>
+										<h5><a href="agent-page.html" tabindex="-1">سعید شمس</a></h5>
+									</div>
+									<span class="article-pulish-date"><i class="ti-comment-alt ml-2"></i>410</span>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+					 {% endcomment %}
+				</div>
+			</section>
+			<div class="clearfix"></div>
+			<!-- ============================ article End ================================== -->
+{% endblock %}
