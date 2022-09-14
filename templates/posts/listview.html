@@ -277,16 +277,16 @@
 									<div class="listing-short-detail-wrap">
 										<div class="_card_list_flex mb-2">
 											<div class="_card_flex_01">
-												<span class="_list_blickes _netork">6 شبکه</span>
-												<span class="_list_blickes types">خانوادگی</span>
+												<span class="_list_blickes _netork">رهن {{apa.gheymat_rahn}} میلیون</span>
+												<span class="_list_blickes types">اجاره{{apa.gheymat_ejare}} میلیون</span>
 											</div>
 											<div class="_card_flex_last">
-												<h6 class="listing-card-info-price mb-0">700 میلیون</h6>
+												<h6 class="listing-card-info-price mb-0">{{apa.gheymat}} میلیون</h6>
 											</div>
 										</div>
 										<div class="_card_list_flex">
 											<div class="_card_flex_01">
-												<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
+												<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">{{apa.locations}}</a></h4>
 											</div>
 										</div>
 									</div>
@@ -295,13 +295,13 @@
 								<div class="price-features-wrapper">
 									<div class="list-fx-features">
 										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="{% static 'assets/img/bed.svg' %}" width="13" alt="" /></div>3 خوابه
+											<div class="inc-fleat-icon"><img src="{% static 'assets/img/bed.svg' %}" width="13" alt="" /></div>{{apa.tedad_otagh}} خوابه
 										</div>
 										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="{% static 'assets/img/bathtub.svg' %}" width="13" alt="" /></div>1 حمام
+											<div class="inc-fleat-icon"><img src="{% static 'assets/img/bathtub.svg' %}" width="13" alt="" /></div>{{apa.tedad_dastshoe}} حمام
 										</div>
 										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="{% static 'assets/img/move.svg' %}" width="13" alt="" /></div>800 متر مربع
+											<div class="inc-fleat-icon"><img src="{% static 'assets/img/move.svg' %}" width="13" alt="" /></div> سال ساخت:{{apa.sal_sakht}}		
 										</div>
 									</div>
 								</div>
@@ -320,7 +320,7 @@
 										</div>
 									</div>
 									<div class="footer-flex">
-										<a href="property-detail.html" class="prt-view">مشاهده جزئیات</a>
+										<a href="{% url 'posts:detailview' apa.id %}" class="prt-view">مشاهده جزئیات</a>
 									</div>
 								</div>
 							</div>

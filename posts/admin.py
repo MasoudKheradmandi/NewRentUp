@@ -10,3 +10,4 @@ class customeaparteman(admin.ModelAdmin):
         BookInline,
     ]
 admin.site.register(aparteman,customeaparteman)
+admin.site.register(aparteman_images)

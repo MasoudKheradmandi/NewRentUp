@@ -6,4 +6,5 @@ app_name='posts'
 
 urlpatterns = [
     path('listview/',views.listview,name='listview'),
+    path('det/<id>/',views.detailview,name='detailview'),
 ]
