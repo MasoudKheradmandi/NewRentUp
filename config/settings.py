@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 AUTH_USER_MODEL='account.MyUser'
 
 INSTALLED_APPS = [
+    "admin_interface",
+    "colorfield",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'posts',
     'home',
     'account',
+    'contactus',
 
 ]
 
@@ -117,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # locale.setlocale(locale.LC_ALL, "fa_IR.UTF-8")
 #-------------------------------
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'UTC'
 
@@ -152,3 +155,6 @@ EMAIL_PORT =587
 EMAIL_HOST_USER = 'masoud1212u@gmail.com'
 EMAIL_HOST_PASSWORD = 'qfoa hiyr iroc kqjd'
 #------------------------------
+
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]

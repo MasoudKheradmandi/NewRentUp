@@ -197,16 +197,19 @@
 							
 							<div class="col-lg-5 col-md-5">
 								<div class="footer_widget">
-									<img src="assets/img/logo-light.png" class="img-footer small mb-2" alt="" />
+									<img src="{% static 'assets/img/logo-light.png' %}" class="img-footer small mb-2" alt="" />
 									<h4 class="extream mb-3">آیا در مورد چیزی به کمک<br>نیاز دارید؟</h4>
 									<p>هر ماه به روزرسانی ها ، معاملات داغ ، آموزش ها ، تخفیف های مستقیم را در صندوق ورودی خود ارسال کنید</p>
 									<div class="foot-news-last">
+										<form method="post" action = "{% url 'contactus:khabarname' %}" >
+											{% csrf_token %}
 										<div class="input-group">
-										  <input type="text" class="form-control" placeholder="آدرس ایمیل">
+										  <input type="email" name='email' class="form-control" placeholder="آدرس ایمیل">
 											<div class="input-group-append">
-												<button type="button" class="input-group-text theme-bg b-0 text-light">اشتراک</button>
+												<button type="submit" class="input-group-text theme-bg b-0 text-light">اشتراک</button>
 											</div>
 										</div>
+									</form>
 									</div>
 								</div>
 							</div>
